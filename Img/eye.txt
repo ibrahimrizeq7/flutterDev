@@ -1,0 +1,103 @@
+import 'package:flutter/material.dart';
+import 'package:clinicapp/pages/shami_page.dart';
+import 'package:clinicapp/pages/sudan_page.dart';
+import 'package:clinicapp/pages/alfaisal_page.dart';
+import 'package:clinicapp/pages/alzarqa_page.dart';
+import 'package:clinicapp/pages/makka_page.dart';
+import 'package:clinicapp/pages/kush_page.dart';
+import 'package:clinicapp/pages/mugla_page.dart';
+
+class EyecentersShami extends StatefulWidget {
+  @override
+  _EyecentersShamiState createState() => _EyecentersShamiState();
+}
+
+class _EyecentersShamiState extends State<EyecentersShami> {
+  var eyecenter_list = [
+    {
+      "name": "Shami Eye Center",
+      "picture": "Img/shamilogo.png",
+    },
+    /*{
+      "name": "Sudan Eye Center",
+      "picture": "Img/Sudan0.png",
+    },
+    {
+      "name": "Makka Eye Center",
+      "picture": "Img/Makka0.png",
+    },
+    {
+      "name": "Al-Zarqa Eye Center",
+      "picture": "Img/Alzarga0.png",
+    },
+    {
+      "name": "Kush Eye Center",
+      "picture": "Img/kush0.png",
+    },
+    {
+      "name": "Alfaisal Eye Center",
+      "picture": "Img/Alfaisal0.png",
+    },
+  
+    {
+      "name": "Mugla Eye Center",
+      "picture": "Img/mugla.png",
+    },*/
+  ];
+    @override
+  Widget build(BuildContext context) {
+    var gridView = GridView.builder(
+      
+      itemCount: eyecenter_list.length,
+      gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
+      itemBuilder:(BuildContext context, int index){
+        return Eyecenter(
+           eye_name: eyecenter_list[index]['name'],
+           eye_picture: eyecenter_list[index]['picture'],
+             
+          );
+      }
+      );
+    return gridView;
+  }
+}
+class Eyecenter extends StatelessWidget {
+  final eye_name;
+  final eye_picture;
+
+  Eyecenter({
+    this.eye_name,
+    this.eye_picture,
+   
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Container(
+        height: 100.0,
+        width: 100.0,
+      child: Hero(
+        tag: eye_name,
+       child: Material(
+         child :InkWell(
+           onTap: ()=> Navigator.of(context).push(new MaterialPageRoute(builder: (context)=> new ShamiDetials())),
+         child: GridTile(
+           footer: Container(
+             color: Colors.white70,
+             child: ListTile(
+               leading: Text(eye_name, style: TextStyle(fontWeight: FontWeight.bold)),
+             ),
+           ),
+           child: Image.asset(eye_picture,
+           fit: BoxFit.cover,)),
+         ),
+         ),
+      ),
+      ),
+    );
+
+  }
+  }
+
+////////////////////////////////////
+ 

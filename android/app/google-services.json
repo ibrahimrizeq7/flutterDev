@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1062489034365",
+    "project_id": "clinic-eye",
+    "storage_bucket": "clinic-eye.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062489034365:android:7c57fe26b8b818b39c6b14",
+        "android_client_info": {
+          "package_name": "com.example.myclinic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062489034365-k6kg4t6qnugvh4a02s1grqfqoi244d4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoevB-TZY15PBDOXhwaiAwJaWJQom5z9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062489034365-k6kg4t6qnugvh4a02s1grqfqoi244d4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
